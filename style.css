@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b12;
+    color: white;
+}
+
+.entete {
+    background: linear-gradient(135deg, #050505, #102b59);
+    text-align: center;
+    padding: 30px 15px;
+    border-bottom: 3px solid #1687ff;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.entete h1 {
+    color: #1687ff;
+    font-size: 35px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.entete p {
+    color: #dddddd;
+    font-size: 16px;
+}
+
+main {
+    max-width: 1400px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+main h2 {
+    text-align: center;
+    color: #1687ff;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.description {
+    text-align: center;
+    color: #cccccc;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.grille-maillots {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.maillot {
+    background: #141a26;
+    border: 1px solid #26364f;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+    overflow: hidden;
+}
+
+.maillot:hover {
+    transform: translateY(-5px);
+    border-color: #1687ff;
+    box-shadow: 0 8px 25px rgba(22, 135, 255, 0.18);
+}
+
+.maillot img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.maillot h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.prix {
+    color: #38a1ff;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.bouton-commande {
+    display: block;
+    background: #087b43;
+    color: white;
+    text-decoration: none;
+    padding: 12px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.bouton-commande:hover {
+    background: #0aa85b;
+}
+
+footer {
+    text-align: center;
+    background: #050505;
+    color: #aaaaaa;
+    padding: 25px 15px;
+    margin-top: 35px;
+    border-top: 1px solid #26364f;
+}
+
+@media (max-width: 1000px) {
+    .grille-maillots {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .grille-maillots {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .maillot {
+        padding: 8px;
+    }
+
+    .maillot img {
+        height: 160px;
+    }
+
+    .maillot h3 {
+        font-size: 15px;
+    }
+
+    .prix {
+        font-size: 18px;
+    }
+
+    .bouton-commande {
+        font-size: 12px;
+    }
+
+    .entete h1 {
+        font-size: 28px;
+    }
+}
+.banniere {
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    background: linear-gradient(110deg, #050505 35%, #102b59 100%);
+    border-bottom: 2px solid #1687ff;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenu-banniere {
+    max-width: 650px;
+}
+
+.sous-titre {
+    color: #38a1ff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.contenu-banniere h2 {
+    color: white;
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.contenu-banniere p:not(.sous-titre) {
+    color: #dddddd;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.bouton-banniere {
+    display: inline-block;
+    background: #1687ff;
+    color: white;
+    padding: 15px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.bouton-banniere:hover {
+    background: #0066cc;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 650px) {
+    .banniere {
+        min-height: 320px;
+        padding: 35px 20px;
+    }
+
+    .contenu-banniere h2 {
+        font-size: 36px;
+    }
+
+    .contenu-banniere p:not(.sous-titre) {
+        font-size: 15px;
+    }
+
+    .bouton-banniere {
+        font-size: 13px;
+        padding: 13px 17px;
+    }
+}.banniere {
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    background: linear-gradient(110deg, #050505 35%, #102b59 100%);
+    border-bottom: 2px solid #1687ff;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenu-banniere {
+    max-width: 650px;
+}
+
+.sous-titre {
+    color: #38a1ff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.contenu-banniere h2 {
+    color: white;
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.contenu-banniere p:not(.sous-titre) {
+    color: #dddddd;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.bouton-banniere {
+    display: inline-block;
+    background: #1687ff;
+    color: white;
+    padding: 15px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.bouton-banniere:hover {
+    background: #0066cc;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 650px) {
+    .banniere {
+        min-height: 320px;
+        padding: 35px 20px;
+    }
+
+    .contenu-banniere h2 {
+        font-size: 36px;
+    }
+
+    .contenu-banniere p:not(.sous-titre) {
+        font-size: 15px;
+    }
+
+    .bouton-banniere {
+        font-size: 13px;
+        padding: 13px 17px;
+    }
+}
+.pied-page {
+    background: linear-gradient(135deg, #050505, #102b59);
+    border-top: 3px solid #1687ff;
+    text-align: center;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+}
+
+.pied-page h2 {
+    color: #1687ff;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.slogan-pied {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.pied-page p:not(.slogan-pied) {
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.contact-pied {
+    display: inline-block;
+    background: #087b43;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: background 0.3s;
+}
+
+.contact-pied:hover {
+    background: #0aa85b;
+}
+
+.copyright {
+    border-top: 1px solid #26364f;
+    padding-top: 20px;
+    color: #aaaaaa;
+    font-size: 13px;
+}
+/* DESIGN PROFESSIONNEL DES CARTES MAILLOTS */
+
+.maillot {
+background: linear-gradient(145deg, #111827, #080d18);
+border: 1px solid #243b5a;
+border-radius: 15px;
+padding: 15px;
+text-align: center;
+overflow: hidden;
+transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.maillot:hover {
+transform: translateY(-7px);
+border-color: #1687ff;
+box-shadow: 0 8px 25px rgba(22, 135, 255, 0.25);
+}
+
+.maillot img {
+width: 100%;
+height: 220px;
+object-fit: contain;
+background: #ffffff;
+border-radius: 10px;
+margin-bottom: 15px;
+transition: transform 0.3s ease;
+}
+
+.maillot:hover img {
+transform: scale(1.04);
+}
+
+.maillot h3 {
+color: #ffffff;
+font-size: 18px;
+margin: 10px 0;
+}
+
+.maillot .prix {
+color: #38a1ff;
+font-size: 20px;
+font-weight: bold;
+margin: 12px 0;
+}
+
+.maillot .choix-taille {
+width: 100%;
+padding: 10px;
+margin-bottom: 12px;
+background: #ffffff;
+color: #111111;
+border: 1px solid #1687ff;
+border-radius: 7px;
+font-size: 14px;
+}
+
+.maillot .bouton-commande {
+display: block;
+width: 100%;
+box-sizing: border-box;
+padding: 12px 8px;
+background: #087b43;
+color: #ffffff;
+border-radius: 8px;
+text-decoration: none;
+font-weight: bold;
+font-size: 13px;
+transition: background 0.3s ease;
+}
+
+.maillot .bouton-commande:hover {
+background: #0aa85b;
+}
+
+@media (max-width: 600px) {
+.maillot {
+padding: 10px;
+}
+
+.maillot img {
+    height: 160px;
+}
+.maillot h3 {
+    font-size: 15px;
+}
+.maillot .prix {
+    font-size: 17px;
+}
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.entete {
+    padding: 15px 10px;
+}
+
+.entete .logo {
+    max-width: 130px;
+    height: auto;
+}
+
+.entete h1 {
+    font-size: 25px;
+}
+
+.entete p {
+    font-size: 13px;
+}
+
+.banniere {
+    min-height: 280px;
+    padding: 30px 15px;
+}
+
+.contenu-banniere h2 {
+    font-size: 32px;
+}
+
+.contenu-banniere p:not(.sous-titre) {
+    font-size: 14px;
+}
+
+.bouton-banniere {
+    display: inline-block;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+    padding: 12px 14px;
+}
+
+.grille-maillots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 10px;
+}
+
+.maillot {
+    min-width: 0;
+    padding: 8px;
+}
+
+.maillot img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+}
+
+.maillot h3 {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.maillot .prix {
+    font-size: 16px;
+}
+
+.maillot .choix-taille {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.maillot .bouton-commande {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.pied-page {
+    padding: 30px 15px 15px;
+}
+
+.pied-page h2 {
+    font-size: 25px;
+}
+
+.contact-pied {
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 13px;
+}
